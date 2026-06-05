@@ -1,0 +1,1 @@
+Only the needed files are copied into the source folder. Inclusing a zipped versoin of the full library to copy and past the needed files.
