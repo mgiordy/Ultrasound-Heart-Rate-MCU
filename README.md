@@ -82,12 +82,12 @@ Or
 
 1. Clone the  repository:
 ```console
-$ git clone link_to_repo
+$ git clone https://github.com/mgiordy/Ultrasound-Heart-Rate-MCU.git
 ```
 
 2. Change to the project directory:
 ```console
-$ cd name_of_repo
+$ cd Ultrasound-Heart-Rate-MCU
 ```
 
 3. Load the project inside STM32CubeIDE. The easiest way is to import the zip file proided in this repository (it contains the same code of the repository).
@@ -105,8 +105,8 @@ file -> open project from filesystem -> archive -> finish
 
 The following modes are available. Make sure to set only one to 1 at the time for correct operation.
 
-- **MODE_ADC_VALIDATION**: Use this mode for testing the ADC and to acquire data. It needs to be used in conjunction to the [adc_checker.ipynb](../data-analysis/adc_checker.ipynb) jupyter notebook.
-- **MODE_DSP_VALIDATION**: Use this mode to validate the DSP against a Python impelemntation. It shall be run with the companion jupyter notebook: [adc_checker.ipynb](../data-analysis/dsp_checker.ipynb)
+- **MODE_ADC_VALIDATION**: Use this mode for testing the ADC and to acquire data. It needs to be used in conjunction to the [adc_checker.ipynb](https://github.com/mgiordy/Ultrasound-Heart-Rate-Data-Analysis/blob/main/adc_checker.ipynb) jupyter notebook.
+- **MODE_DSP_VALIDATION**: Use this mode to validate the DSP against a Python impelemntation. It shall be run with the companion jupyter notebook: [dsp_checker.ipynb](https://github.com/mgiordy/Ultrasound-Heart-Rate-Data-Analysis/blob/main/dsp_checker.ipynb)
 - **MODE_DSP_SELFTEST**: Use this mode to test the DSP against a set of input data saved on the device. It provides readable output on the serial terminal with a `921600` baud rate.
 - **MODE_DEMO**: Use this mode to test the system, acquire data, process them and extract the heart rate with onboard DSP.  It provides readable output on the serial terminal with a `921600` baud rate.
 
@@ -131,7 +131,7 @@ Here's a visual representation of connections:
 
 ##  License
 
-This project is protected under the [SELECT-A-LICENSE](https://choosealicense.com/licenses) License. For more details, refer to the [LICENSE](https://choosealicense.com/licenses/) file.
+This project is licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). For more details, refer to the [LICENSE](LICENSE) file.
 
 ---
 

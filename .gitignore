@@ -1,0 +1,8 @@
+# Ignoring object files
+*.d
+*.o
+
+.DS_Store
+
+*.cyclo
+*.su
