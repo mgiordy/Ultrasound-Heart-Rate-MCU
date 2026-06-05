@@ -1,8 +1,10 @@
+# PuLsE: Accurate and Robust Ultrasound-Based Continuous Heart-Rate Monitoring on a Wrist-Worn IoT Device
+
 <div align="center">
   <img src="readme_assets/logo.jpeg" width="300" alt="project-logo">
 </div>
 <p align="center">
-    <div align="center"><h1>Heart rate extraction with A-Mode ultrasound</h1></div>
+    <div align="center"><h1>Heart rate extraction with A-Mode ultrasound — MCU code</h1></div>
 </p>
 <div align="center">
 		<em>Developed with the software and tools below.</em>
@@ -40,7 +42,7 @@ Our work introduces a proof-of-concept wearable ultrasound system that achieves 
 
 ##  Features
 
-The code provided in this repository was used in the paper: TODO. 
+The code provided in this repository was used in the paper *PuLsE: Accurate and Robust Ultrasound-Based Continuous Heart-Rate Monitoring on a Wrist-Worn IoT Device* ([ArXiv](https://arxiv.org/pdf/2410.16219), [IEEE IoT Journal](https://ieeexplore.ieee.org/document/11050898)).
 It can acquire the enveloped ultrasound signal and extract the heart rate data from it with embedded digital singal processing.
 The code in this repository is written for a STM32L496 MCU from ST Microelectronics. It provides the following main features:
 
@@ -60,7 +62,7 @@ The project follows the standard project structure of STM32CubeIde. In particula
 - Debug: this folder contains the Makefiles and the binary files to compile and flash the MCU. Moreover, it containes the object files and dependancy files from the C code compilation, which are ignored in this git repository.
 - Drivers: this folder contains the ST HAL and CMSIS libraries for the STM32L4 used in this project. Moreover, this folder contains the CMSIS-DSP source files used to efficiently extract the heart rate from ultrasound data.
 - **embd_us**: this folder contains the main() function and the code to acquire the data, extract the heart rate and display it in real time on the terminal. In particular the following files are of interest:
-  - **settings.h**: this file contains the settings for the program. You can set the mode the program operates (more in [Operating modes](#operating_modes)), the amount of samples the ADC captures, the DSP window and buffer.
+  - **settings.h**: this file contains the settings for the program. You can set the mode the program operates (more in [Mode selection](#mode-selection)), the amount of samples the ADC captures, the DSP window and buffer.
   - **adc_callback.c**: this file contains the callback from the ADC end of conversion interrupt.
   - **dsp.c**: this files contains the digital signal processing. It also contains some UART transmit function for the valiation of the different DSP steps.
   - **handshake.c**: this file contains the code for the handshake between the MCU and the PC (python code) and functions to exchange protocol informations.
@@ -137,9 +139,12 @@ This project is licensed under the [Apache License 2.0](https://www.apache.org/l
 
 ##  Acknowledgments
 
-If you use the data or the code present in this repository please cite the follpwing paper:
+Publication links:
+[ArXiv link](https://arxiv.org/pdf/2410.16219)
+[IEEE IoT Journal](https://ieeexplore.ieee.org/document/11050898)
 
-- M. Giordano et. Al. TODO
+If you use the data or the code present in this repository, please cite as:
+>Giordano, M., Leitner, C., Vogt, C., Benini, L., & Magno, M. (2024). PuLsE: Accurate and Robust Ultrasound-based Continuous Heart-Rate Monitoring on a Wrist-Worn IoT Device.
 
 
 ---
